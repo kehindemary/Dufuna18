@@ -16,11 +16,12 @@ This README explains how to get started with this repository.
 
 # How to make a submission
 If you want to make a submission for a week where the topic was 'sample'
-- Create a new branch
-- Navigate to the folder that has your name in the submissions folder
-- Added necessary files/content for the task
-- Add the new files/content to git and commit your changes
-- Push to your forked repository and subsequently make a Pull request to the main repository
+- Create a new branch.
+- Navigate to the folder that has your name in the submissions folder.
+- Create a folder for the task using the topic of the week as name. Example: `VersionControl`
+- Add necessary files/content for the task to the folder.
+- Add the new files/content to git and commit your changes.
+- Push to your forked repository and subsequently make a Pull request to the main repository.
 - Keep checking to ensure your pull request has been merged or have comments so you can address as only merging of your pull request signifies task completion.
 
 # Pull Request
