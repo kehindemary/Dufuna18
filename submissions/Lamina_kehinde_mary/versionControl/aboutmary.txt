@@ -1,0 +1,10 @@
+my name is Lamina Kehinde Mary
+studied computer science
+from The Federal Polytechnic Nasarawa
+my hobbies are Reading,learning new skills and traveling
+<<<<<<< HEAD
+i am very simple, positive, hardworking and loves God.
+=======
+i am very simple, positive, hardworking and loves God
+>>>>>>> 4afb4ce... latest commit
+ 
