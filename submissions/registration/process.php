@@ -1,11 +1,7 @@
 <?php
-        session_start();
         //connect to db
         $conn= mysqli_connect('localhost', 'root','mysql', 'register');
-      
-            if(isset ($_POST['submit_btn']))
-            {
-                session_start();
+            if(isset ($_POST['submit_btn'])){
                 $firstname = mysqli_real_escape_string ($conn, $_POST ['firstname'] );
                 $lastname =mysqli_real_escape_string ($conn,$_POST['lastname']);
                 $email = mysqli_real_escape_string ($conn,$_POST['email']);
@@ -14,26 +10,32 @@
                 $phoneno = mysqli_real_escape_string ($conn,$_POST['phoneno']);
                 $gender = mysqli_real_escape_string ($conn, $_POST['gender']);
                 $country = mysqli_real_escape_string ($conn,$_POST['country']);
-
-                $sql = "INSERT INTO users(firstname , lastname, email, password1, 
-                confirmpassword, phoneno, gender, country, created_at)
-                                 VALUES('$firstname', 
-                                 '$lastname',
-                                 '$email', 
-                                 '$password1',
-                                 '$confirmpassword','$phoneno',
-                                  '$gender', '$country', NOW())";
-                                 mysqli_query($conn , $sql);
-                    if($password1 == $confirmpassword)
-                     {
-                        $password1 = md5 ($password1);
-                             echo  ("Registration successful , Please login");
-                             header("location:success.html"); 
-                    }
-                        else{
-                                die  ("Error: Password doesnt match" ."<br>". $sql."<br>".mysqli_error($conn));
+                        if($password1 == $confirmpassword){
+                                $password1 = md5 ($password1);
+                                $confirmpassword = md5 ($confirmpassword);
                         }
-                    }
+                                else{
+                                        die  ("Error: Password doesnt match" ."<br>". $sql."<br>".mysqli_error($conn));
+                                }
+                                        $sql = "INSERT INTO users(firstname , lastname, email, password1, 
+                                        confirmpassword, phoneno, gender, country, created_at)
+                                                        VALUES('$firstname', 
+                                                        '$lastname',
+                                                        '$email', 
+                                                        '$password1',
+                                                        '$confirmpassword','$phoneno',
+                                                        '$gender', '$country', NOW())";
+                                                        $result = mysqli_query($conn , $sql);
+                                                                if($result){
+                                                                        echo "Record Saved Successfully";
+                                                                }
+                                                                        else{
+                                                                                echo ("Record not saved" . mysqli_error($conn)); 
+                                                                        }
+                                                                        header('location: success.html');
+                                        
+                                        }
+
 
 ?>
                               
@@ -70,7 +72,8 @@
                                 <label for="female">Female:</label>
                         </p>
                 
-                        <p><label for="country">Country:</label>
+                        <p>
+                                <label for="country">Country:</label>
                                 <select name="country" id="country">
                                         <option value="nigeria" selected>Nigeria</option>
                                         <option value="usa">USA</option>
@@ -80,13 +83,7 @@
                         </p>
                         <br>
                                 <input type="submit"  class="button" name="submit_btn" value="SignUp" id="submit">
-
-                            
                     </div>
-                    
-                                             
-                   
                 </form>
-    
             </body>
 </html>
