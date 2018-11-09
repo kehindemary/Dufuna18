@@ -1,8 +1,8 @@
 <?php
-        //connect to db
-        $conn= mysqli_connect('localhost', 'root','mysql', 'register');
+        
         $message = '';
-            if(isset ($_POST['submit_btn'])){
+            
+                
                 $firstname = $_POST ['firstname'];
                 $lastname = $_POST['lastname'];
                 $email = $_POST['email'];
@@ -11,7 +11,6 @@
                 $phoneno = $_POST['phoneno'];
                 $gender = $_POST['gender'];
                 $country = $_POST['country'];
-                
                 if(empty ( $firstname ) || empty( $lastname ) || empty( $email ) || empty( $password1 ) || 
                 empty( $confirmpassword ) || empty( $phoneno ) || empty( $gender ) || empty( $country )) {
                 $message .= '<p class="error">All fields are required</p>';
@@ -34,7 +33,6 @@
                 elseif ($password1 != $confirmpassword){
                 $message .= '<p class="error">Password doesnt match, please enter the correct password</p>';
                 }
-
                 elseif (!is_numeric ( $phoneno )) {
                 $message .= '<p class="error">Phone number should be numeric</p>';
                 }
@@ -43,10 +41,7 @@
                 }
                 else  {
                 $message .= '<p class="success">All inputs are valid, thank you</p>';
-                if($password1 == $confirmpassword){
-                        $password1 = md5 ($password1);
-                        $confirmpassword = md5 ($confirmpassword);
-                }
+                $conn= mysqli_connect('localhost', 'root','mysql', 'register');
                 $sql = "INSERT INTO users(firstname , lastname, email, password1, 
                 confirmpassword, phoneno, gender, country, created_at)
                 VALUES('$firstname', 
@@ -58,29 +53,20 @@
                         $result = mysqli_query($conn , $sql);
                 if($result){
                 $message .= '<p class="success">Record Saved Successfully</p>';
+               // header('location: success.html');
                 }
                 else{
                 $message .= '<p class="error">Record not Saved</p>';
-                header('location: success.html');
+                
                 }
                 }
-        } 
-               
-                
-                
-                
-               
         
-                        
-                
-
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Signup</title>
-        <script type="text/javascript" src = "validation.js"></script>
-        <link rel="stylesheet" type="text/css" href="main.css">
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <style>
                 .error {
                 color: red;
@@ -89,58 +75,9 @@
                 color: green;
                 }
         </style>
-
-    </head>
-            <body>
-            <?php echo $message; ?>
-            <form method="POST" name="regForm" onsubmit = "return validateForm()">
-                    <div class="container">
-                        <h1>Create Account</h1>
-                        <p>
-                        <label for="firstname">Firstname:</label>
-                        </p>
-                        <input type="text" name="firstname"  class="text" placeholder="Enter Firstname" id="firstname">
-                        <p>
-                        <label for="lastname">Lastname:</label>
-                        </p> 
-                        <input type="text" name="lastname" class="text" placeholder="Enter Lastname" id="lastname"> 
-                        <p>
-                        <label for="email">email:</label>
-                        </p> 
-                        <input type="email" name="email" class="text" placeholder="Enter email" id="email">
-                        <p>
-                        <label for="password">Password:</label>
-                        </p>
-                        <input type="password" name="password1" class="text"  placeholder="Enter password" id="password1">     
-                        <p>
-                        <label for="confirmpassword">Confirm Password:</label>
-                        </p>  
-                        <input type="password" class="text" name="confirmpassword" placeholder="Confirm password" id="confirmpassword">     
-                        <p>
-                        <label for="phoneno">Phone Number:</label>
-                        </p>  
-                        <input type="number" name="phoneno" class="text" placeholder="Enter phone no" id="phoneno">                                 
-                        <p>     
-                        <label for="gender">Gender:</label>
-                        <input type="radio" name="gender" value="male" id="male">  
-                        <label for="male">Male:</label>
-                        <input type="radio" name="gender" value="female" id="female">
-                        <label for="female">Female:</label>
-                        </p>
-                
-                        <p>
-                                <label for="country">Country:</label>
-                                <select name="country" id="country">
-                                        <option value = "0" selected>Choose one</option>
-                                        <option value="nigeria" selected>Nigeria</option>
-                                        <option value="usa">USA</option>
-                                        <option value="ghana">Ghana</option>
-                                        <option value="korea">Korea</option>
-                                </select>
-                        </p>
-                        <br>
-                        <input type="submit"  class="button" name="submit_btn" value="SignUp" id="submit">
-                    </div>
-                </form>
-            </body>
+</head>
+<body>
+      <?php echo $message; ?>  
+</body>
 </html>
+
