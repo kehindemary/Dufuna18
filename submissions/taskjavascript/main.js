@@ -12,3 +12,4 @@ var person = {
     alert('Hi! I\'m ' + this.name[0] + '.');
     }
     };
+    inst
