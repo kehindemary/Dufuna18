@@ -1,0 +1,107 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background: white;
+}
+header nav {
+    background-color: brown;
+    height: 60px;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    margin-bottom: 0%;
+    
+}
+
+header nav ul li{
+    list-style: none;
+    float: left;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    float: left;
+}
+header nav ul li a:hover{
+    background:burlywood;
+    color:blueviolet;   
+}
+
+
+header form{
+    float: right;
+    margin-right: 20px;
+}
+header .nav-login a{
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+
+}
+header .nav-login a:hover{
+    color: rgb(13, 110, 155);
+}
+
+.text-wrapper{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+    border: solid, gray;
+    size: 50px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right:2px;
+    margin-left: 2px; 
+    cursor: pointer;
+}
+.button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+    border: solid, gray;
+    size: 20px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: blue;
+    color: antiquewhite;
+}
+.button:hover{
+    background-color: palevioletred;
+    color: black;
+    cursor: pointer;
+}
+section .main-container{
+    width: 100%;
+    margin-top: 0px;
+    height: 600px;
+    background-color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+}
+section table{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: lightblue;
+}
+section .main-container h3{
+    text-align: center;
+}
+section .main-container b{
+    text-align: justify;
+}
+section .main-container a{
+    text-decoration: none;
+
+    
+}
+section .main-container a:hover{
+    color: red;
+    
+}
