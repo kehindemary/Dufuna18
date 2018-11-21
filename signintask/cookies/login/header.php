@@ -16,7 +16,7 @@ session_start();
             <div class="main-wrapper">
                 <ul>
                     <li>
-                        <a href="index.php">Home</a>
+                    <a href="../login/signup/index.html">Signup</a>
                     </li>
                 </ul>
             </div>

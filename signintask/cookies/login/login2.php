@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if(isset($_POST['submit'])){
     include('connection.php');
     $email = mysqli_escape_string($conn, $_POST['email']);
@@ -25,19 +27,16 @@ if(isset($_POST['submit'])){
             $country = $row['country'];
             $phoneno = $row['phoneno'];
 
-            //cookies
-            setcookie("firstname",$firstname, time()+3600, "/", "", 0);
-            setcookie("lastname",$lastname, time()+3600, "/", "", 0);
-            setcookie("email", $email, time()+3600, "/", "", 0);
-            setcookie("gender", $gender, time()+3600, "/", "", 0);
-            setcookie("country", $country, time()+3600, "/", "", 0);
-            setcookie("phoneno", $firstname, time()+3600, "/", "", 0);
-
-            header("Location:welcomesession.php");
+            $_SESSION['firstname'] = $firstname;
+            $_SESSION['lastname'] = $lastname;
+            $_SESSION['gender'] = $gender;
+            $_SESSION['country'] = $country;
+            $_SESSION['phoneno'] = $phoneno;
+            header("Location:welcome.php");
     }
         else{
-            die("Email or doesn't exist, please enter the correct Email");
-            header("Location:index.html");
+            die ("Email or doesn't exist, please enter the correct Email");
+            header("Location:login1.php");
  }
 }
 ?>

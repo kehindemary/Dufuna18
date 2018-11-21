@@ -1,4 +1,9 @@
+<?php
+session_start(); 
+?>
 <html>
+
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,13 +18,13 @@
             <div class="main-wrapper">
                 <ul>
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="login1.php">Home</a>
                     </li>
                 </ul>
             </div>
             <div class="nav-login">
-                <a href="signup.php">Signup</a>
-                <form action="signin2.php" method="POST" name="loginForm" id="loginForm">
+            <a href="../login/signup/index.html">Signup</a>
+                <form action="login.php" method="POST" name="loginForm" id="loginForm">
                 <input type="email" name="email" id="email" placeholder="Email" class="text-wrapper">
                 <input type="password" name="password1" id="password1" placeholder="Password" class="text-wrapper">
                 <input type="submit" name="submit" id="submit" value ="Login" class="button">
@@ -32,7 +37,6 @@
         <div class="main-container">
             <h3>Welcome</h3>
         </div>
-        
     </section>
 </body>
 </html>

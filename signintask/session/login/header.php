@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -14,7 +16,7 @@
             <div class="main-wrapper">
                 <ul>
                     <li>
-                        <a href="index.html">Home</a>
+                    <a href="../login/signup/index.html">Signup</a>
                     </li>
                 </ul>
             </div>
@@ -29,14 +31,6 @@
             </div>
         </nav>
     </header>
-    <section>
-        <div class="main-container">
-                
-<h3>Welcome <?php $_SESSION['firstname']?></h3>
-        </div>
-        <table>
-            <th>Firstname:</th>
-        </table>
-    </section>
+    
 </body>
 </html>

@@ -35,8 +35,8 @@ if(isset($_POST['submit'])){
             header("Location:welcome.php");
     }
         else{
-            die("Email or doesn't exist, please enter the correct Email");
-            header("Location:index.html");
+            die ("Email or doesn't exist, please enter the correct Email");
+            header("Location:login1.php");
  }
 }
 ?>

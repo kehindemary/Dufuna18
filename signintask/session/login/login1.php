@@ -18,13 +18,13 @@ session_start();
             <div class="main-wrapper">
                 <ul>
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="login1.php">Home</a>
                     </li>
                 </ul>
             </div>
             <div class="nav-login">
-                <a href="login.php">Signup</a>
-                <form action="signin.php" method="POST" name="loginForm" id="loginForm">
+            <a href="../login/signup/index.html">Signup</a>
+                <form action="login.php" method="POST" name="loginForm" id="loginForm">
                 <input type="email" name="email" id="email" placeholder="Email" class="text-wrapper">
                 <input type="password" name="password1" id="password1" placeholder="Password" class="text-wrapper">
                 <input type="submit" name="submit" id="submit" value ="Login" class="button">
@@ -35,14 +35,8 @@ session_start();
     </header>
     <section>
         <div class="main-container">
-
-           
-<h3>Welcome
-</h3>
+            <h3>Welcome</h3>
         </div>
-        <table>
-            <th>Firstname:</th>
-        </table>
     </section>
 </body>
 </html>
