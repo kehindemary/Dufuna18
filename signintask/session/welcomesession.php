@@ -3,9 +3,10 @@ include('header.php');
 ?>
 <section>
         <div class = "main-container">
-            <h3>Home</h3><br><br>
+            <h3>
+                Home
+                <br><br>
             <?php
-                session_start();
                 if ( isset($_SESSION['email'])) {
                     echo "Login Successful ". "<br>";
                     echo "Welcome" . " ".  $_SESSION['firstname'] ." ". $_SESSION['lastname'];

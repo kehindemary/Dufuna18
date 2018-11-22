@@ -7,7 +7,7 @@ include('header.php');
             <br><br>
             <b>
             <?php
-                session_start();
+    
                 if ( isset($_SESSION['email'])) {
                     
                 echo "<br><br>";
@@ -25,10 +25,9 @@ include('header.php');
                 }
                 
             ?>
-            </p>
-            <b>
+            </b>
             <a href = "welcomesession.php"> back to the previous page</a><br>
-    </p>
+    
             
         </div>
 </section>

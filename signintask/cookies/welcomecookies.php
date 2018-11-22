@@ -7,7 +7,7 @@ include('header.php');
             <br><br>
             <b>
             <?php
-                session_start();
+    
                 if ( isset($_COOKIE['email'])) {
                     
                 echo "<br><br>";

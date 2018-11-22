@@ -3,7 +3,8 @@ include('header.php');
 ?>
 <section>
         <div class = "main-container">
-            <h3>Home
+            <h3>
+                Home
                 <br>
                 <br>
             <?php
@@ -12,7 +13,7 @@ include('header.php');
                     echo "Welcome" . " ".  $_COOKIE['firstname'] ." ". $_COOKIE['lastname'];
                     
                 echo "<br>";
-                echo "Your Email Address is " . " " . $_SESSION['email'];
+                echo "Your Email Address is " . " " . $_COOKIE['email'];
                 }
             ?>
             <p>

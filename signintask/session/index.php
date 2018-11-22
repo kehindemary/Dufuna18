@@ -1,9 +1,5 @@
-<?php
-session_start(); 
-?>
+
 <html>
-
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,16 +29,6 @@ session_start();
             </div>
         </nav>
     </header>
-    <section>
-        <div class="main-container">
-
-           
-<h3>Welcome
-</h3>
-        </div>
-        <table>
-            <th>Firstname:</th>
-        </table>
-    </section>
+    
 </body>
 </html>
