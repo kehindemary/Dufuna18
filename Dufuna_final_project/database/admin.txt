@@ -1,0 +1,6 @@
+use menu_order;
+CREATE TABLE admin_login (
+    admin_id int PRIMARY KEY AUTO_INCREMENT not null,
+	username varchar(20) NOT null,
+	password1 varchar(20) not null);
+	
